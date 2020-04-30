@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let rootVC = ViewController()  // TODO setup your root ViewController here
+        let rootVC = RepoListViewBuilder.build()
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
         return true

@@ -15,6 +15,14 @@
 		02B8850B245AB32E00F2155F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B8850A245AB32E00F2155F /* APIClient.swift */; };
 		02B8850D245AB67C00F2155F /* GithubRepositoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B8850C245AB67C00F2155F /* GithubRepositoryResponse.swift */; };
 		02B8850F245AB6BE00F2155F /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B8850E245AB6BE00F2155F /* GithubRepository.swift */; };
+		02B88515245ABC4E00F2155F /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B88514245ABC4E00F2155F /* RepoCell.swift */; };
+		02B88517245ABD5000F2155F /* PagingNetworkStateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B88516245ABD5000F2155F /* PagingNetworkStateCell.swift */; };
+		02B88519245ABE4B00F2155F /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B88518245ABE4B00F2155F /* RepoListViewController.swift */; };
+		02B8851B245ABFB900F2155F /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B8851A245ABFB900F2155F /* RepoListViewModel.swift */; };
+		02B8851D245ABFE900F2155F /* RepoListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B8851C245ABFE900F2155F /* RepoListViewState.swift */; };
+		02B8851F245AC10E00F2155F /* RepoListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B8851E245AC10E00F2155F /* RepoListUseCase.swift */; };
+		02B88521245AC49500F2155F /* RepoListTableViewDataSourceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B88520245AC49500F2155F /* RepoListTableViewDataSourceAdapter.swift */; };
+		02B88523245AC7A400F2155F /* RepoListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B88522245AC7A400F2155F /* RepoListViewBuilder.swift */; };
 		03BE32122AF00ECD9D100A03 /* Pods_paging_sample_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D4C8785389EB65CD16EB5C /* Pods_paging_sample_ios.framework */; };
 		64D10DD0D6E986A21C1631E2 /* Pods_paging_sample_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6429EB2DE0392045C425B937 /* Pods_paging_sample_iosTests.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +50,14 @@
 		02B8850A245AB32E00F2155F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		02B8850C245AB67C00F2155F /* GithubRepositoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoryResponse.swift; sourceTree = "<group>"; };
 		02B8850E245AB6BE00F2155F /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
+		02B88514245ABC4E00F2155F /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		02B88516245ABD5000F2155F /* PagingNetworkStateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingNetworkStateCell.swift; sourceTree = "<group>"; };
+		02B88518245ABE4B00F2155F /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
+		02B8851A245ABFB900F2155F /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
+		02B8851C245ABFE900F2155F /* RepoListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewState.swift; sourceTree = "<group>"; };
+		02B8851E245AC10E00F2155F /* RepoListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListUseCase.swift; sourceTree = "<group>"; };
+		02B88520245AC49500F2155F /* RepoListTableViewDataSourceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListTableViewDataSourceAdapter.swift; sourceTree = "<group>"; };
+		02B88522245AC7A400F2155F /* RepoListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewBuilder.swift; sourceTree = "<group>"; };
 		18C0D506A0CBD7BAF6C8C7DF /* Pods-paging-sample-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paging-sample-ios.release.xcconfig"; path = "Target Support Files/Pods-paging-sample-ios/Pods-paging-sample-ios.release.xcconfig"; sourceTree = "<group>"; };
 		26D4C8785389EB65CD16EB5C /* Pods_paging_sample_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paging_sample_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6429EB2DE0392045C425B937 /* Pods_paging_sample_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paging_sample_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +109,7 @@
 		02B884E7245AA88200F2155F /* paging-sample-ios */ = {
 			isa = PBXGroup;
 			children = (
+				02B88511245ABBF900F2155F /* UI */,
 				02B88510245ABBE300F2155F /* Data */,
 				02B884E8245AA88200F2155F /* AppDelegate.swift */,
 				02B884EC245AA88200F2155F /* ViewController.swift */,
@@ -120,6 +137,37 @@
 				02B8850E245AB6BE00F2155F /* GithubRepository.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		02B88511245ABBF900F2155F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				02B88512245ABC0C00F2155F /* RepoList */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		02B88512245ABC0C00F2155F /* RepoList */ = {
+			isa = PBXGroup;
+			children = (
+				02B88513245ABC2500F2155F /* Cell */,
+				02B88518245ABE4B00F2155F /* RepoListViewController.swift */,
+				02B8851A245ABFB900F2155F /* RepoListViewModel.swift */,
+				02B8851C245ABFE900F2155F /* RepoListViewState.swift */,
+				02B8851E245AC10E00F2155F /* RepoListUseCase.swift */,
+				02B88520245AC49500F2155F /* RepoListTableViewDataSourceAdapter.swift */,
+				02B88522245AC7A400F2155F /* RepoListViewBuilder.swift */,
+			);
+			path = RepoList;
+			sourceTree = "<group>";
+		};
+		02B88513245ABC2500F2155F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				02B88514245ABC4E00F2155F /* RepoCell.swift */,
+				02B88516245ABD5000F2155F /* PagingNetworkStateCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		5D8B65E297CA1FFB209B1216 /* Pods */ = {
@@ -309,11 +357,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B88519245ABE4B00F2155F /* RepoListViewController.swift in Sources */,
+				02B88517245ABD5000F2155F /* PagingNetworkStateCell.swift in Sources */,
+				02B8851D245ABFE900F2155F /* RepoListViewState.swift in Sources */,
 				02B884ED245AA88200F2155F /* ViewController.swift in Sources */,
 				02B884E9245AA88200F2155F /* AppDelegate.swift in Sources */,
+				02B88523245AC7A400F2155F /* RepoListViewBuilder.swift in Sources */,
 				02B8850F245AB6BE00F2155F /* GithubRepository.swift in Sources */,
+				02B8851F245AC10E00F2155F /* RepoListUseCase.swift in Sources */,
 				02B8850B245AB32E00F2155F /* APIClient.swift in Sources */,
+				02B88521245AC49500F2155F /* RepoListTableViewDataSourceAdapter.swift in Sources */,
 				02B8850D245AB67C00F2155F /* GithubRepositoryResponse.swift in Sources */,
+				02B88515245ABC4E00F2155F /* RepoCell.swift in Sources */,
+				02B8851B245ABFB900F2155F /* RepoListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
