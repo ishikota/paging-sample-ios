@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        GithubRepository().fetch(page: 1)
+        .subscribe(onSuccess: { response in
+            print(response)
+        }, onError: { error in
+            print(error)
+        })
     }
 
 

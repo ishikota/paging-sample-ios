@@ -12,6 +12,9 @@
 		02B884F2245AA88300F2155F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02B884F1245AA88300F2155F /* Assets.xcassets */; };
 		02B884F5245AA88300F2155F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B884F3245AA88300F2155F /* LaunchScreen.storyboard */; };
 		02B88500245AA88400F2155F /* paging_sample_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B884FF245AA88400F2155F /* paging_sample_iosTests.swift */; };
+		02B8850B245AB32E00F2155F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B8850A245AB32E00F2155F /* APIClient.swift */; };
+		02B8850D245AB67C00F2155F /* GithubRepositoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B8850C245AB67C00F2155F /* GithubRepositoryResponse.swift */; };
+		02B8850F245AB6BE00F2155F /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B8850E245AB6BE00F2155F /* GithubRepository.swift */; };
 		03BE32122AF00ECD9D100A03 /* Pods_paging_sample_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D4C8785389EB65CD16EB5C /* Pods_paging_sample_ios.framework */; };
 		64D10DD0D6E986A21C1631E2 /* Pods_paging_sample_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6429EB2DE0392045C425B937 /* Pods_paging_sample_iosTests.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +39,9 @@
 		02B884FB245AA88400F2155F /* paging-sample-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "paging-sample-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B884FF245AA88400F2155F /* paging_sample_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paging_sample_iosTests.swift; sourceTree = "<group>"; };
 		02B88501245AA88400F2155F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02B8850A245AB32E00F2155F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		02B8850C245AB67C00F2155F /* GithubRepositoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoryResponse.swift; sourceTree = "<group>"; };
+		02B8850E245AB6BE00F2155F /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
 		18C0D506A0CBD7BAF6C8C7DF /* Pods-paging-sample-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paging-sample-ios.release.xcconfig"; path = "Target Support Files/Pods-paging-sample-ios/Pods-paging-sample-ios.release.xcconfig"; sourceTree = "<group>"; };
 		26D4C8785389EB65CD16EB5C /* Pods_paging_sample_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paging_sample_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6429EB2DE0392045C425B937 /* Pods_paging_sample_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paging_sample_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +93,7 @@
 		02B884E7245AA88200F2155F /* paging-sample-ios */ = {
 			isa = PBXGroup;
 			children = (
+				02B88510245ABBE300F2155F /* Data */,
 				02B884E8245AA88200F2155F /* AppDelegate.swift */,
 				02B884EC245AA88200F2155F /* ViewController.swift */,
 				02B884F1245AA88300F2155F /* Assets.xcassets */,
@@ -103,6 +110,16 @@
 				02B88501245AA88400F2155F /* Info.plist */,
 			);
 			path = "paging-sample-iosTests";
+			sourceTree = "<group>";
+		};
+		02B88510245ABBE300F2155F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				02B8850A245AB32E00F2155F /* APIClient.swift */,
+				02B8850C245AB67C00F2155F /* GithubRepositoryResponse.swift */,
+				02B8850E245AB6BE00F2155F /* GithubRepository.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		5D8B65E297CA1FFB209B1216 /* Pods */ = {
@@ -294,6 +311,9 @@
 			files = (
 				02B884ED245AA88200F2155F /* ViewController.swift in Sources */,
 				02B884E9245AA88200F2155F /* AppDelegate.swift in Sources */,
+				02B8850F245AB6BE00F2155F /* GithubRepository.swift in Sources */,
+				02B8850B245AB32E00F2155F /* APIClient.swift in Sources */,
+				02B8850D245AB67C00F2155F /* GithubRepositoryResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
