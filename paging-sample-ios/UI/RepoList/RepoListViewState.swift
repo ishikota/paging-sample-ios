@@ -5,6 +5,7 @@ struct RepoListViewState {
         case initialized
         case fetchItems(RepoListPagingData)
         case refreshItems(RepoListPagingData)
+        case updateLike(UpdateLikeResult)
     }
     var items: [GithubRepositoryResponse.Item]
     var mutatingContext: MutatingContext

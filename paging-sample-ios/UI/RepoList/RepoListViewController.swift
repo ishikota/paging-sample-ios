@@ -58,6 +58,10 @@ class RepoListViewController: UIViewController {
                 case .refreshItems:
                     self.tableView.reloadData()
                     self.refreshControl.endRefreshing()
+                case let .updateLike(updateInfo):
+                    if let indexPathToUpdate = self.tableViewDataSourceAdapter.getIndexPath(of: updateInfo.id) {
+                        self.tableView.reloadRows(at: [indexPathToUpdate], with: .none)
+                    }
                 }
             }).disposed(by: disposeBag)
     }

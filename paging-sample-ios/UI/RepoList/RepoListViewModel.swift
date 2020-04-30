@@ -39,7 +39,11 @@ class RepoListViewModel {
                 return useCase.fetchItems(page: page).asObservable().catchErrorJustReturn(RepoListPagingData.empty)
         }.map(RepoListViewState.MutatingContext.refreshItems)
 
-        let viewStateWithoutPagingNetworkState = Observable.merge(loadItems, refreshItems)
+        let updateLike = view.updateLikeTrigger.asObservable()
+            .flatMap { id -> Single<UpdateLikeResult> in useCase.updateLike(id: id) }
+            .map(RepoListViewState.MutatingContext.updateLike)
+
+        let viewStateWithoutPagingNetworkState = Observable.merge(loadItems, refreshItems, updateLike)
             .scan(into: RepoListViewState.empty) { viewState, mutatingContext in
                 viewState.mutatingContext = mutatingContext
                 switch mutatingContext {
@@ -57,6 +61,9 @@ class RepoListViewModel {
                     viewState.items = pagingData.items
                     page += 1
                     pagingNetworkState.accept(.idle)
+                case let .updateLike(result):
+                    let idx = viewState.items.firstIndex { $0.name == result.id }!
+                    viewState.items[idx].liked = result.newState
                 }
         }.startWith(RepoListViewState.empty)
 

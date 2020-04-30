@@ -23,4 +23,8 @@ struct RepoListUseCase {
             RepoListPagingData(items: response.items, reachedLast: page == 10)
         }
     }
+
+    func updateLike(id: String) -> Single<UpdateLikeResult> {
+        return repo.updateLike(id: id)
+    }
 }
