@@ -19,8 +19,8 @@ struct RepoListUseCase {
         if Bool.random() {
             return Single.error(NSError(domain: "dummy", code: 0, userInfo: nil)).delay(.seconds(1), scheduler: MainScheduler.instance)
         }
-        return repo.fetch(page: page).map {
-            RepoListPagingData(items: $0, reachedLast: false)  // TODO
+        return repo.fetch(page: page).map { response in
+            RepoListPagingData(items: response.items, reachedLast: page == 10)
         }
     }
 }

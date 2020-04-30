@@ -19,6 +19,7 @@ class PagingNetworkStateCell: UITableViewCell {
 
     private let progress = UIActivityIndicatorView(style: .medium)
     private let retryButton = UIButton(type: .system)
+    private let reachedLastLabel = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -38,6 +39,15 @@ class PagingNetworkStateCell: UITableViewCell {
         retryButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
         retryButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
         retryButton.addTarget(self, action: #selector(onButtonTapped), for: .touchUpInside)
+        retryButton.isHidden = true
+
+        reachedLastLabel.text = "最後です"
+        reachedLastLabel.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(reachedLastLabel)
+        reachedLastLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        reachedLastLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+        reachedLastLabel.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        reachedLastLabel.isHidden = true
     }
 
     required init?(coder: NSCoder) {
@@ -50,15 +60,20 @@ class PagingNetworkStateCell: UITableViewCell {
         case .idle:
             progress.isHidden = true
             retryButton.isHidden = true
+            reachedLastLabel.isHidden = true
         case .loading:
             progress.isHidden = false
             retryButton.isHidden = true
+            reachedLastLabel.isHidden = true
             progress.startAnimating()
         case .error:
             progress.isHidden = true
             retryButton.isHidden = false
+            reachedLastLabel.isHidden = true
         case .reachedLast:
-            print("TODO")
+            progress.isHidden = true
+            retryButton.isHidden = true
+            reachedLastLabel.isHidden = false
         }
     }
 

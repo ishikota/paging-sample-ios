@@ -16,7 +16,7 @@ class RepoListViewModel {
 
         let loadMoreTrigger = view.duplicatableLoadMoreTrigger.asObservable()
             .withLatestFrom(pagingNetworkState)
-            .filter { $0.isIdle }  // Ignore event while isLoading
+            .filter { $0.isIdle }  // ignore loadmore event when state is "loading" or "error" or "reachedLast"
             .map { _ in }
 
         let loadItems = Observable.merge(view.fetchTrigger.asObservable(), loadMoreTrigger.asObservable(), view.retryTrigger.asObservable())
